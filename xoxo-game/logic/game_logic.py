@@ -15,7 +15,7 @@ class GameLogic:
     def reset_game(self):
         self._reset_board()
         self._reset_step_count()
-        self._reset_player()
+        self._reset_player_to_start()
         self._reset_winner()
         self._reset_cache()
 
@@ -37,7 +37,7 @@ class GameLogic:
 
     def cancel_setp(self):
         if (self.current_player in ("player_1", "player_2")) and (self.cache != {}):
-            self.game_board[self.cache["row"]][self.cache["col"]] = ""
+            self._mark_place("", self.cache["row"], self.cache["col"])
             self.reset_button(self.cache["button"])
             self._reset_cache()
             self._switch_player()
@@ -52,9 +52,9 @@ class GameLogic:
     def reset_button(self, button):
         button.setText("")
 
-    def reset_score(self):
-        self.player_1_score = 0
-        self.player_2_score = 0
+    def reset_data(self):
+        self._reset_score()
+        self._reset_player_to_waiting()
 
     def _game_over(self):
         self.current_player = "game over"
@@ -135,8 +135,15 @@ class GameLogic:
     def _reset_board(self):
         self.game_board = [["" for _ in range(3)] for _ in range(3)]
 
-    def _reset_player(self):
+    def _reset_player_to_start(self):
         self.current_player = "player_1"
+
+    def _reset_player_to_waiting(self):
+        self.current_player = "Click play to start game"
 
     def _reset_cache(self):
         self.cache = {}
+
+    def _reset_score(self):
+        self.player_1_score = 0
+        self.player_2_score = 0

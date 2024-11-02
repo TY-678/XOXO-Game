@@ -39,7 +39,7 @@ class GameApp(QtWidgets.QDialog, Ui_Dialog, GameLogic):
         self.update_message_display(self.gameMessageBrowser, None)
 
     def reset_all_data(self):
-        self.reset_score()
+        self.reset_data()
         self.reset_all_button()
         self.update_score_dispaly()
 
