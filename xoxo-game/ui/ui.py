@@ -8,38 +8,56 @@ class Ui_Dialog(object):
         self.gameAeraButton_0_0 = QtWidgets.QPushButton(parent=Dialog)
         self.gameAeraButton_0_0.setGeometry(QtCore.QRect(70, 160, 50, 55))
         self.gameAeraButton_0_0.setText("")
+        self.gameAeraButton_0_0.setProperty("row", 0)
+        self.gameAeraButton_0_0.setProperty("col", 0)
         self.gameAeraButton_0_0.setObjectName("gameAeraButton_0_0")
         self.gameAeraButton_0_1 = QtWidgets.QPushButton(parent=Dialog)
         self.gameAeraButton_0_1.setGeometry(QtCore.QRect(125, 160, 50, 55))
         self.gameAeraButton_0_1.setText("")
+        self.gameAeraButton_0_1.setProperty("row", 0)
+        self.gameAeraButton_0_1.setProperty("col", 1)
         self.gameAeraButton_0_1.setObjectName("gameAeraButton_0_1")
         self.gameAeraButton_0_2 = QtWidgets.QPushButton(parent=Dialog)
         self.gameAeraButton_0_2.setGeometry(QtCore.QRect(180, 160, 50, 55))
         self.gameAeraButton_0_2.setText("")
+        self.gameAeraButton_0_2.setProperty("row", 0)
+        self.gameAeraButton_0_2.setProperty("col", 2)
         self.gameAeraButton_0_2.setObjectName("gameAeraButton_0_2")
         self.gameAeraButton_1_0 = QtWidgets.QPushButton(parent=Dialog)
         self.gameAeraButton_1_0.setGeometry(QtCore.QRect(70, 210, 50, 55))
         self.gameAeraButton_1_0.setText("")
+        self.gameAeraButton_1_0.setProperty("row", 1)
+        self.gameAeraButton_1_0.setProperty("col", 0)
         self.gameAeraButton_1_0.setObjectName("gameAeraButton_1_0")
         self.gameAeraButton_1_1 = QtWidgets.QPushButton(parent=Dialog)
         self.gameAeraButton_1_1.setGeometry(QtCore.QRect(125, 210, 50, 55))
         self.gameAeraButton_1_1.setText("")
+        self.gameAeraButton_1_1.setProperty("row", 1)
+        self.gameAeraButton_1_1.setProperty("col", 1)
         self.gameAeraButton_1_1.setObjectName("gameAeraButton_1_1")
         self.gameAeraButton_1_2 = QtWidgets.QPushButton(parent=Dialog)
         self.gameAeraButton_1_2.setGeometry(QtCore.QRect(180, 210, 50, 55))
         self.gameAeraButton_1_2.setText("")
+        self.gameAeraButton_1_2.setProperty("row", 1)
+        self.gameAeraButton_1_2.setProperty("col", 2)
         self.gameAeraButton_1_2.setObjectName("gameAeraButton_1_2")
-        self.gameAeraButton_2_1 = QtWidgets.QPushButton(parent=Dialog)
-        self.gameAeraButton_2_1.setGeometry(QtCore.QRect(125, 260, 50, 55))
-        self.gameAeraButton_2_1.setText("")
-        self.gameAeraButton_2_1.setObjectName("gameAeraButton_2_1")
         self.gameAeraButton_2_0 = QtWidgets.QPushButton(parent=Dialog)
         self.gameAeraButton_2_0.setGeometry(QtCore.QRect(70, 260, 50, 55))
         self.gameAeraButton_2_0.setText("")
+        self.gameAeraButton_2_0.setProperty("row", 2)
+        self.gameAeraButton_2_0.setProperty("col", 0)
         self.gameAeraButton_2_0.setObjectName("gameAeraButton_2_0")
+        self.gameAeraButton_2_1 = QtWidgets.QPushButton(parent=Dialog)
+        self.gameAeraButton_2_1.setGeometry(QtCore.QRect(125, 260, 50, 55))
+        self.gameAeraButton_2_1.setText("")
+        self.gameAeraButton_2_1.setProperty("row", 2)
+        self.gameAeraButton_2_1.setProperty("col", 1)
+        self.gameAeraButton_2_1.setObjectName("gameAeraButton_2_1")
         self.gameAeraButton_2_2 = QtWidgets.QPushButton(parent=Dialog)
         self.gameAeraButton_2_2.setGeometry(QtCore.QRect(180, 260, 50, 55))
         self.gameAeraButton_2_2.setText("")
+        self.gameAeraButton_2_2.setProperty("row", 2)
+        self.gameAeraButton_2_2.setProperty("col", 2)
         self.gameAeraButton_2_2.setObjectName("gameAeraButton_2_2")
         self.playButton = QtWidgets.QPushButton(parent=Dialog)
         self.playButton.setGeometry(QtCore.QRect(160, 20, 65, 31))
@@ -72,19 +90,31 @@ class Ui_Dialog(object):
         self.label_3 = QtWidgets.QLabel(parent=Dialog)
         self.label_3.setGeometry(QtCore.QRect(10, 200, 51, 21))
         self.label_3.setObjectName("label_3")
-        self.player1Score = QtWidgets.QLCDNumber(parent=Dialog)
-        self.player1Score.setGeometry(QtCore.QRect(10, 220, 51, 21))
-        self.player1Score.setObjectName("player1Score")
-        self.player2Score = QtWidgets.QLCDNumber(parent=Dialog)
-        self.player2Score.setGeometry(QtCore.QRect(10, 280, 51, 21))
-        self.player2Score.setObjectName("player2Score")
+        self.player1Score_display = QtWidgets.QLCDNumber(parent=Dialog)
+        self.player1Score_display.setGeometry(QtCore.QRect(10, 220, 51, 21))
+        self.player1Score_display.setObjectName("player1Score_display")
+        self.player2Score_display = QtWidgets.QLCDNumber(parent=Dialog)
+        self.player2Score_display.setGeometry(QtCore.QRect(10, 280, 51, 21))
+        self.player2Score_display.setObjectName("player2Score_display")
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
+        self.gameAeraButtonList = [
+            self.gameAeraButton_0_0,
+            self.gameAeraButton_0_1,
+            self.gameAeraButton_0_2,
+            self.gameAeraButton_1_0,
+            self.gameAeraButton_1_1,
+            self.gameAeraButton_1_2,
+            self.gameAeraButton_2_0,
+            self.gameAeraButton_2_1,
+            self.gameAeraButton_2_2,
+        ]
+
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        Dialog.setWindowTitle(_translate("Dialog", "XOXO-GAME"))
         self.playButton.setText(_translate("Dialog", "Paly"))
         self.cancelButton.setText(_translate("Dialog", "Cancel"))
         self.resetButton.setText(_translate("Dialog", "Reset"))
@@ -101,14 +131,3 @@ class Ui_Dialog(object):
         self.label.setText(_translate("Dialog", "Score"))
         self.label_2.setText(_translate("Dialog", "Player 2"))
         self.label_3.setText(_translate("Dialog", "Player 1"))
-
-
-if __name__ == "__main__":
-    import sys
-
-    app = QtWidgets.QApplication(sys.argv)
-    Dialog = QtWidgets.QDialog()
-    ui = Ui_Dialog()
-    ui.setupUi(Dialog)
-    Dialog.show()
-    sys.exit(app.exec())
