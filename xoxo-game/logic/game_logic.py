@@ -4,13 +4,12 @@ from typing import Optional
 class GameLogic:
 
     def __init__(self):
-        self.player_1_score = 0
-        self.player_2_score = 0
-        self.step_count = 0
-        self.winner = None
-        self.cache = {}
-        self.current_player = "Click play to start game"
-        self.game_board = [["" for _ in range(3)] for _ in range(3)]
+        self._reset_score()
+        self._reset_step_count()
+        self._reset_winner()
+        self._reset_cache()
+        self._reset_player_to_waiting()
+        self._reset_board()
 
     def reset_game(self):
         self._reset_board()
